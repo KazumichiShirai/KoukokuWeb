@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD']!='POST') {
 <div class="row">
 <div class="span4">
 <div class="page-header">
-<h1>学生</h1>
+<h1>学生</h1><!-- /.学生登録 -->
 </div>
 <form action="" method="post">
 </i> お名前: <input type="text" name="name" value="<?php echo h($name); ?>">
@@ -63,12 +63,12 @@ if ($_SERVER['REQUEST_METHOD']!='POST') {
 </div><!-- /.span -->
 <div class="span4">
 <div class="page-header">
-<h1>社会人</h1>
+<h1>社会人</h1><!-- /.社会人登録 -->
 </div>
 <form action="" method="post">
 </i> お名前: <input type="text" name="name" value="<?php echo h($name); ?>">
 <input type="hidden" name="univ" value="社会人">
-<input type="hidden" name="grade" value="社会人">
+<input type="hidden" name="grade" value="<?php echo ADULT_NUM; ?>">
 <p>メールアドレス： <input type="text" name="email" value="<?php echo h($email); ?>"> </p>
 <p>パスワード： <input type="password" name="password" value="<?php echo h($password); ?>"></p>
 <p><input type="hidden" name="token" value="<?php echo $_SESSION['token']; ?>"></p>
